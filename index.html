@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tacos El Güero, en Zapotiltic, Jalisco. Tacos al pastor, bistec, birria, gringas y bebidas.">
+    <title>Tacos El Güero | Zapotiltic</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado">
+    <a href="#inicio" class="logo">
+        <span class="logo-icono">🌮</span>
+        <span>fondita <b>doña mari</b><small>ZAPOTILTIC, JALISCO</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="navegacion" id="navegacion">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#carrito" class="enlace-carrito">🛒 Carrito <span id="contadorNav">0</span></a>
+    </nav>
+</header>
+
+<main>
+    <section class="portada" id="inicio">
+        <div class="portada-contenido">
+            <span class="etiqueta">🌶️ EL AUTÉNTICO SABOR MEXICANO</span>
+            <h1>El antojo se quita<br>con unos buenos <span>tacos.</span></h1>
+            <p>De esos que llevan buena salsa, tortilla calientita y ese sabor que siempre te hace volver.</p>
+
+            <div class="portada-botones">
+                <a href="#menu" class="boton boton-principal">Ver nuestro menú ↗</a>
+                <a href="#contacto" class="boton boton-secundario">Encuéntranos</a>
+            </div>
+
+            <div class="datos-portada">
+                <div><strong>6</strong><span>Opciones deliciosas</span></div>
+                <div><strong>100%</strong><span>Sabor mexicano</span></div>
+                <div><strong>🌮</strong><span>Hechos al momento</span></div>
+            </div>
+        </div>
+
+        <div class="portada-imagen">
+            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1000&q=85" alt="Tacos mexicanos">
+            <div class="nota-imagen">
+                <span>🔥</span>
+                <div><strong>¡Recién preparados!</strong><small>El antojo empieza aquí</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="franja">
+        <span>🌮 TACO CON TODO</span>
+        <span>🌶️ SALSAS CON SABOR</span>
+        <span>🔥 RECIÉN HECHOS</span>
+        <span>❤️ HECHOS PARA DISFRUTAR</span>
+    </section>
+
+    <section class="seccion menu-seccion" id="menu">
+        <div class="encabezado-seccion">
+            <div>
+                <span class="subtitulo">BUENO, BONITO Y SABROSO</span>
+                <h2>¿Qué se te <span>antoja hoy?</span></h2>
+                <p>Échale un ojo al menú y arma tu pedido favorito.</p>
+            </div>
+            <span class="sello">HECHO CON<br>MUCHO SABOR ❤️</span>
+        </div>
+
+        <div class="filtros">
+            <button class="filtro activo" data-filtro="todos">Todo el menú</button>
+            <button class="filtro" data-filtro="tacos">Tacos</button>
+            <button class="filtro" data-filtro="especialidades">Especialidades</button>
+            <button class="filtro" data-filtro="bebidas">Bebidas</button>
+        </div>
+
+        <div class="catalogo">
+            <article class="producto" data-categoria="tacos">
+                <div class="producto-imagen">
+                    <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=650&q=80" alt="Taco al pastor">
+                    <span class="etiqueta-producto">Favorito</span>
+                </div>
+                <div class="producto-info">
+                    <div class="producto-titulo"><h3>Taco al Pastor</h3><strong>$18</strong></div>
+                    <p>Con piña, cilantro, cebolla y salsa roja.</p>
+                    <button class="boton-agregar" data-nombre="Taco al Pastor" data-precio="18">Agregar al pedido <span>+</span></button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="tacos">
+                <div class="producto-imagen">
+                    <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=650&q=80" alt="Taco de bistec">
+                </div>
+                <div class="producto-info">
+                    <div class="producto-titulo"><h3>Taco de Bistec</h3><strong>$22</strong></div>
+                    <p>Bistec a la plancha con cebollita asada.</p>
+                    <button class="boton-agregar" data-nombre="Taco de Bistec" data-precio="22">Agregar al pedido <span>+</span></button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="especialidades">
+                <div class="producto-imagen">
+                    <img src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=650&q=80" alt="Taco de birria">
+                    <span class="etiqueta-producto">Especialidad</span>
+                </div>
+                <div class="producto-info">
+                    <div class="producto-titulo"><h3>Birria con Consomé</h3><strong>$28</strong></div>
+                    <p>Birria con queso y consomé incluido.</p>
+                    <button class="boton-agregar" data-nombre="Taco de Birria con Consomé" data-precio="28">Agregar al pedido <span>+</span></button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="especialidades">
+                <div class="producto-imagen">
+                    <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?auto=format&fit=crop&w=650&q=80" alt="Gringa de pastor">
+                </div>
+                <div class="producto-info">
+                    <div class="producto-titulo"><h3>Gringa de Pastor</h3><strong>$45</strong></div>
+                    <p>Tortilla de harina con pastor y queso derretido.</p>
+                    <button class="boton-agregar" data-nombre="Gringa de Pastor" data-precio="45">Agregar al pedido <span>+</span></button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="bebidas">
+                <div class="producto-imagen">
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=650&q=80" alt="Bebidas refrescantes">
+                    <span class="etiqueta-producto">Para acompañar</span>
+                </div>
+                <div class="producto-info">
+                    <div class="producto-titulo"><h3>Refresco o Agua Fresca</h3><strong>$20</strong></div>
+                    <p>Refresco, jamaica u horchata de 500 ml.</p>
+                    <button class="boton-agregar" data-nombre="Refresco o Agua Fresca" data-precio="20">Agregar al pedido <span>+</span></button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="especialidades">
+                <div class="producto-imagen">
+                    <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=650&q=80" alt="Orden de cinco tacos">
+                    <span class="etiqueta-producto">Para compartir</span>
+                </div>
+                <div class="producto-info">
+                    <div class="producto-titulo"><h3>Orden de 5 Tacos</h3><strong>$85</strong></div>
+                    <p>Cinco tacos para disfrutar, acompañados de salsas.</p>
+                    <button class="boton-agregar" data-nombre="Orden de 5 Tacos" data-precio="85">Agregar al pedido <span>+</span></button>
+                </div>
+            </article>
+        </div>
+
+        <p class="nota-precios">Precios en pesos mexicanos (MXN). Las imágenes son ilustrativas.</p>
+    </section>
+
+    <section class="seccion servicios-seccion" id="servicios">
+        <div class="encabezado-seccion centrado">
+            <span class="subtitulo">TÚ PON EL ANTOJO</span>
+            <h2>Nosotros ponemos <span>el sabor.</span></h2>
+            <p>Disfruta tus tacos como más te guste.</p>
+        </div>
+
+        <div class="servicios-grid">
+            <article class="servicio">
+                <div class="servicio-icono">🥡</div>
+                <h3>Pedidos para llevar</h3>
+                <p>Arma tu pedido y recógelo para disfrutarlo donde quieras.</p>
+            </article>
+            <article class="servicio">
+                <div class="servicio-icono">📱</div>
+                <h3>Pedidos por WhatsApp</h3>
+                <p>Envíanos tu pedido y consulta los detalles antes de recogerlo.</p>
+            </article>
+            <article class="servicio">
+                <div class="servicio-icono">🎉</div>
+                <h3>Para compartir</h3>
+                <p>Pregunta por nuestras opciones para reuniones y convivios.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="seccion pedido-seccion" id="carrito">
+        <div class="pedido-intro">
+            <span class="subtitulo">TU PEDIDO, A TU MANERA</span>
+            <h2>Arma tu <span>pedido.</span></h2>
+            <p>Agrega tus favoritos, revisa las cantidades y prepara tu pedido por WhatsApp.</p>
+
+            <div class="horario">
+                <span>🕒</span>
+                <div>
+                    <strong>Horario de atención</strong>
+                    <p>Martes a domingo · 6:00 p. m. a 1:00 a. m.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carrito-panel">
+            <div class="carrito-titulo">
+                <h3>🛒 Tu carrito</h3>
+                <span id="cantidadProductos">0 artículos</span>
+            </div>
+
+            <div id="listaCarrito" class="lista-carrito">
+                <div class="carrito-vacio">
+                    <span>🛍️</span>
+                    <h4>Tu carrito está esperando</h4>
+                    <p>Agrega algo rico del menú para comenzar.</p>
+                </div>
+            </div>
+
+            <div class="resumen">
+                <div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+                <div class="total-fila"><span>Total del pedido</span><strong id="total">$0.00</strong></div>
+            </div>
+
+            <label class="campo-label" for="notasPedido">Notas de tu pedido (opcional)</label>
+            <textarea id="notasPedido" rows="2" placeholder="Ej. Sin cebolla, salsa aparte..."></textarea>
+
+            <button id="btnWhatsApp" class="boton boton-whatsapp">💬 Pedir por WhatsApp</button>
+            <button id="btnVaciar" class="boton-vaciar">Vaciar carrito</button>
+            <p class="aviso-carrito">Tu pedido se enviará como mensaje para confirmar los detalles.</p>
+        </div>
+    </section>
+
+    <section class="contacto-seccion" id="contacto">
+        <div class="contacto-info">
+            <span class="subtitulo">AQUÍ NOS ENCUENTRAS</span>
+            <h2>¡Caile por unos <span>tacos!</span></h2>
+            <p>Cuando se te antoje algo rico, aquí tienes nuestros datos para encontrarnos.</p>
+
+            <div class="contacto-dato">
+                <span>📍</span>
+                <div><strong>Dirección</strong><p>Jardín Principal, Av. Hidalgo #12, Col. Centro, Zapotiltic, Jalisco.</p></div>
+            </div>
+            <div class="contacto-dato">
+                <span>🕒</span>
+                <div><strong>Horario</strong><p>Martes a domingo, de 6:00 p. m. a 1:00 a. m.</p></div>
+            </div>
+            <div class="contacto-dato">
+                <span>📱</span>
+                <div><strong>Teléfono y WhatsApp</strong><p>341-118-9076</p></div>
+            </div>
+        </div>
+
+        <div class="formulario-panel">
+            <h3>¿Tienes alguna pregunta?</h3>
+            <p>Escríbenos y prepara tu mensaje para enviarlo por WhatsApp.</p>
+
+            <form id="formContacto">
+                <label for="nombre">Tu nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required maxlength="60">
+
+                <label for="telefono">Tu teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de contacto" required maxlength="20">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required maxlength="500"></textarea>
+
+                <button type="submit" class="boton boton-principal boton-formulario">Preparar mensaje ↗</button>
+                <p id="respuestaFormulario" class="respuesta-formulario" role="status"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="pie">
+    <a href="#inicio" class="logo logo-pie">
+        <span class="logo-icono">🌮</span>
+        <span>fondita <b>doña mari</b><small>ZAPOTILTIC, JALISCO</small></span>
+    </a>
+
+    <p>Buenos tacos, buena compañía y mucho sabor. ❤️</p>
+    <div class="redes">Facebook: fondita doña mari Zapotiltic · Instagram: @fonditadonamari</div>
+    <small>© 2026 fondita doña mari · Proyecto escolar, Actividad 5</small>
+</footer>
+
+<a href="#carrito" class="boton-flotante" aria-label="Ir al carrito">🛒 <span id="contadorFlotante">0</span></a>
+
+</body>
+</html>
